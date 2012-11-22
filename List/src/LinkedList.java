@@ -1,10 +1,8 @@
 public class LinkedList {
 	private Node first;
-	private Node tail;
 	private int size;
 	LinkedList() {
 		first = null;
-		tail  = null;
 		size = 0;
 	}
 	LinkedList(Node newnode) {
@@ -16,7 +14,7 @@ public class LinkedList {
 	
 	public void Append(Object newelem) {
 		Node newnode = new Node();
-		newnode.setElement(5);
+		newnode.setElement(newelem);
 		newnode.setNext(null);
 		if (first == null) {
 			first = newnode;
@@ -43,8 +41,7 @@ public class LinkedList {
 	public static void main(String[] args) {
 		LinkedList link = new LinkedList();
 		link.Append(5);
-		link.Append(5);
-		link.Append(5);
+		link.Append(6);
 		link.PrintList();
 	}
 
