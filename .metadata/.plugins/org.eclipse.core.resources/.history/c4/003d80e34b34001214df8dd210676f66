@@ -1,0 +1,29 @@
+public class Node {
+	private Object element;
+	private Node next;
+	Node(Object e, Node n) {
+		this.element = e;
+		this.next = n;
+	}
+	Node() {
+	}
+	
+	public Object GetElement() {
+		return element;
+	}
+	
+	public Node GetNext() {
+		return next;
+	}
+
+	public void setElement(Object newelem) {
+		element = newelem;
+	}
+	
+	public void setNext (Node newNode) {
+		next = newNode;
+	}
+	
+
+
+}

@@ -1,0 +1,44 @@
+public class cup1_1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a = "abcdefghijklmn";	
+		System.out.println(naiveway(a));
+		System.out.println(Ascii(a));
+		
+		
+		
+	}
+	
+	
+	public static boolean naiveway (String a) {
+		boolean unique = true; 
+		char arr[] = a.toCharArray();
+		for (int i=0; i< arr.length-1; i++)
+		{
+			char tmp = arr[i];
+			for (int j=i+1; j<arr.length; j++)
+			{
+				if (tmp == arr[j])
+					unique = false;
+			}
+		}
+		return unique;
+	}
+	
+	public static boolean Ascii (String a) {
+		boolean unique = true; 
+		int [] asciitable = new int[256];
+		char arr[] = a.toCharArray();
+		for (int i:asciitable) {
+			i = 0;
+		}
+		for (char achar:arr) {
+			int tmp = (int) achar;	
+			asciitable[tmp];
+			
+		}
+		
+		
+		return unique;
+	}
+}
