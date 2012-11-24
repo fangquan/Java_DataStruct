@@ -17,7 +17,8 @@ public class cup2_1 {
 		
 		
 		System.out.println(list);
-		
+		System.out.println(list);
+
 	}
 
 }
