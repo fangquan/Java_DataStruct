@@ -1,6 +1,6 @@
 import java.util.Hashtable;
-
 public class LinkedList {
+
 	private Node first;
 	private int  size;
 	LinkedList(){
@@ -91,7 +91,20 @@ public class LinkedList {
 		}
 	}
 	
-
+	public Node nth_to_last (int n) {
+		Node p1 = first;
+		Node p2 = first;
+		for (int i=0; i<n; i++) {
+			if (p2 == null) {return null;}
+			p2 = p2.next;
+		}
+		if (p2 == null) {return null;}
+		while (p2 != null) {
+			p1 = p1.next;
+			p2 = p2.next;
+		}
+		return p1;		
+	}
 }
 
 
